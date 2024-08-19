@@ -1,0 +1,99 @@
+<html>
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik+Scribble&display=swap" rel="stylesheet">
+
+
+</head>
+
+<style>
+
+ 
+
+  #container{
+  position:relative;
+  }
+
+  #imagescreenLogo{
+    position:absolute;
+    top:0%;
+    width:100%;
+    text-align: center;
+    font-size:300px;
+    font-family: "Oswald", sans-serif;
+    
+
+    opacity:1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #imagescreenLogo.fade{
+    opacity:0;
+  }
+
+  #imagescreenLogo.fadeback{
+    opacity:1;
+  }
+
+  
+  #imagescreen{
+    width: 100%;
+    height: auto;
+
+
+    opacity:1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #imagescreen.fade{
+    opacity:0;
+  }
+
+  #imagescreen.fadeback{
+    opacity:1;
+  }
+
+ 
+
+</style>
+
+<body>
+
+<div id="container">
+<img id="imagescreen" src="" alt="pixar animations"></img>
+<p id="imagescreenLogo">DEVIL'Z TATTOZ</p>
+</div>
+  
+
+<script>
+
+
+var imagetodisplay = document.getElementById('imagescreen');
+var texttodisplay = document.getElementById("imagescreenLogo");
+
+imageChanger();
+
+
+
+function imageChanger(){
+
+imagetodisplay.classList.toggle('fade');
+
+console.log("faded");
+setTimeout(newImage , 3000);
+}
+
+function newImage(){
+  imagetodisplay.src = "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg";
+  console.log("img src changed");
+
+  texttodisplay.classList.toggle("fade");
+  imageChanger();
+}
+
+</script>
+
+</body>
+</html>
